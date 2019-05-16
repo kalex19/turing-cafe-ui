@@ -1,0 +1,17 @@
+.submitForm {
+  display: flex;
+}
+
+.resInput{
+    display: inline;
+    margin: 0 1%;
+    height: 20px;
+    width: 17%;
+}
+
+.resBtn {
+  background-color: teal;
+  color: white;
+  height: 27px;
+  width: 20%;
+}

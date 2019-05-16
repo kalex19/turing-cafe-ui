@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import ResyForm from './ResyForm';
+import ResyForm from './ResyForm';
 import ResyContainer from './ResyContainer';
 import PropTypes from 'prop-types';
 
@@ -38,7 +38,7 @@ handleSubmit = (res) => {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          {/*<ResyForm submit={this.handleSubmit}/>*/}
+          <ResyForm submit={this.handleSubmit}/>
         </div>
         <div className='resy-container'>
           <ResyContainer reservations={this.state.reservations}/>
