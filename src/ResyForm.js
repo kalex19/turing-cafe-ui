@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './ResyForm';
+import './ResyForm.css';
 
 
 export default class ResyForm extends Component {
@@ -16,6 +16,7 @@ export default class ResyForm extends Component {
 
 
 handleChange = e => {
+  console.log(e)
   this.setState({
     [e.target.name]: e.target.value
   })
@@ -31,12 +32,12 @@ handleSubmit = e => {
   render() {
     return (
       <div>
-      <form onSubmit={this.handleSubmit}>
-      <input value='name' type='text' onChange={this.handleChange}>
-      <input value='date' type='text'onChange={this.handleChange}>
-      <input value='time' type='text'onChange={this.handleChange}>
-      <input value='number of guests' type='text' onChange={this.handleChange}>
-      <input type='submit' value="Make Reservation">
+      <form onSubmit={this.handleSubmit} className='submitForm'>
+      <input placeholder="Name" value={this.state.name} type='text' onChange={this.handleChange} className="resInput"/>
+      <input placeholder="Date mm/dd" value={this.state.date} type='text'onChange={this.handleChange} className="resInput"/>
+      <input placeholder="Time" value={this.state.time} type='text'onChange={this.handleChange} className="resInput"/>
+      <input placeholder="Number of guests" value={this.state.numberOfGuests} type='text' onChange={this.handleChange} className="resInput"/>
+      <input type='submit' value="Make Reservation" className='resBtn'/>
       </form>
       </div>
       )
